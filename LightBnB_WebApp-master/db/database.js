@@ -40,19 +40,6 @@ const getUserWithEmail = (email) => {
     });
 };
 
-// const getUserWithEmail = function (email) {
-//   let resolvedUser = null;
-//   for (const userId in users) {
-//     const user = users[userId];
-//     if (user && user.email.toLowerCase() === email.toLowerCase()) {
-//       resolvedUser = user;
-//     }
-//   }
-//   return Promise.resolve(resolvedUser);
-// };
-
-
-
 /**
  * Get a single user from the database given their id.
  * @param {string} id The id of the user.
@@ -70,10 +57,6 @@ const getUserWithId = (id) => {
     });
 };
 
-// const getUserWithId = function (id) {
-//   return Promise.resolve(users[id]);
-// };
-
 /**
  * Add a new user to the database.
  * @param {{name: string, password: string, email: string}} user
@@ -90,13 +73,6 @@ const addUser = (user) => {
       console.log(err.message);
     });
 };
-
-// const addUser = function (user) {
-//   const userId = Object.keys(users).length + 1;
-//   user.id = userId;
-//   users[userId] = user;
-//   return Promise.resolve(user);
-// };
 
 /// Reservations
 
